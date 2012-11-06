@@ -1,0 +1,3 @@
+content gna_mobile jar:chrome/gna_mobile.jar!/content/
+locale	gna_mobile	en-US		jar:chrome/gna_mobile.jar!/locale/en-US/
+skin	gna_mobile	classic/1.0	jar:chrome/gna_mobile.jar!/skin/

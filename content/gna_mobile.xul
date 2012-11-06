@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://gna_mobile/skin/gna_mobile.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://gna_mobile/locale/gna_mobile.dtd">
+
+<window id="gna_mobile" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<!-- TODO -->
+</window>

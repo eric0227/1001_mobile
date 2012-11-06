@@ -1,0 +1,43 @@
+$base-color: #555658;
+$active-color: #B52509;
+
+//$base-gradient: 'glossy';
+
+$loading-spinner-color: #000000;
+
+@import 'sencha-touch/default/all';
+
+// You may remove any of the following modules that you
+// do not use in order to create a smaller css file.
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-toolbar-forms;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-layout;
+@include sencha-carousel;
+@include sencha-form;
+@include sencha-msgbox;
+@include sencha-loading-spinner;
+
+@include sencha-toolbar-ui('black', #000000, 'glossy');
+
+// Your custom code goes here...
+@include pictos-iconmask('photos2');
+@include pictos-iconmask('user_list');
+@include pictos-iconmask('info_plain');
+@include pictos-iconmask('list');
+@include pictos-iconmask('phone_ring1');
+@include pictos-iconmask('search');
+@include pictos-iconmask('calendar2');
+@include pictos-iconmask('inbox3');
+@include pictos-iconmask('doc_list');
+@include pictos-iconmask('locate4');
+@include pictos-iconmask('promotion');
+@include pictos-iconmask('eyetest');
+@include pictos-iconmask('expand');
+@include pictos-iconmask('delete');

@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>1001 Optical mobile</title>
+    <style type="text/css">
+         /**
+         * Example of an initial loading indicator.
+         * It is recommended to keep this as minimal as possible to provide instant feedback
+         * while other resources are still being loaded for the first time
+         */
+        html, body {
+            height: 100%;
+            background-color: #1985D0;
+        }
+
+        #appLoadingIndicator {            
+            color: #FFFFFF;
+            position: absolute;
+            padding-top: 70px;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            -webkit-animation-name: appLoadingIndicator;
+            -webkit-animation-duration: 4s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: linear;
+            
+            display: inline-block;
+            opacity: 0.9;
+        }
+        
+        #appLoadingIndicator_body h1 {
+                font-size: 25px;
+        }
+        
+        #appLoadingIndicator h2 {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            font-size: 20px;
+        }
+
+        #appLoadingIndicator .ball {
+            background-color: #FFFFFF;
+            display: inline-block;
+            height: 30px;
+            -webkit-border-radius: 15px;
+            margin: 0 5px;
+            width: 30px;
+            opacity: 0.8;
+        }
+
+        @-webkit-keyframes appLoadingIndicator{
+            0% {
+                opacity: 0.8
+            }
+            50% {
+                opacity: 0
+            }
+            100% {
+                opacity: 0.8
+            }
+        }
+        
+        .x-html {
+            padding: 0px !important;
+        }
+        
+        .x-tabbar > * {
+            z-index: 1;
+        }
+        
+        .x-toolbar-black .x-title { color: #FFFFFF !important; }
+        
+        .x-toolbar-black .x-button, .x-toolbar .x-toolbar-black .x-button, .x-toolbar-black .x-field-select .x-component-outer, .x-toolbar .x-toolbar-black .x-field-select .x-component-outer, .x-toolbar-black .x-field-select .x-component-outer::before, .x-toolbar .x-toolbar-black .x-field-select .x-component-outer::before {
+                /* border: 1px solid black;
+                border-top-color: black;
+                */
+                color: #FFFFFF !important;
+        }
+            
+       .x-body {
+           background: none !important;
+       }
+        
+    </style>
+    <!-- The line below must be kept intact for Sencha Command to build your application -->
+    <script type="text/javascript">(function(h){function f(c,d){document.write('<meta name="'+c+'" content="'+d+'">')}if("undefined"===typeof g)var g=h.Ext={};g.blink=function(c){var d=c.js||[],c=c.css||[],b,e,a;f("viewport","width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no");f("apple-mobile-web-app-capable","yes");f("apple-touch-fullscreen","yes");for(b=0,e=c.length;b<e;b++)a=c[b],"string"!=typeof a&&(a=a.path),document.write('<link rel="stylesheet" href="'+a+'">');for(b=0,e=d.length;b<
+e;b++)a=d[b],"string"!=typeof a&&(a=a.path),document.write('<script src="'+a+'"><\/script>')}})(this);
+;Ext.blink({"id":"b4f9a5e0-ed72-11e1-adcc-2b3a63134e74","js":[{"path":"sdk/sencha-touch.js","type":"js"},{"path":"config.js","update":"delta","type":"js"},{"path":"app.js","bundle":true,"update":"delta","type":"js"}],"css":[{"path":"resources/css/app.css","update":"delta","type":"css"},{"path":"resources/css/custom.css","update":"delta","type":"css"}]})</script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
+    <script>
+        function hideAddressBar() {
+            setTimeout(function() {
+                window.scrollTo(0, 1);
+            }, 1000); // The delay can be tweaked a bit, but is necessary.
+        }   
+        window.onresize = function() {
+             if (document.activeElement.tagName.toLowerCase() == 'body') {
+                // Do this check to prevent scrolling when typing in a textfield
+                hideAddressBar();
+            }
+        };
+
+        // Google Analytics
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-34340004-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+    <div id="appLoadingIndicator">
+        <div id="appLoadingIndicator_body">
+            <img src="./resources/images/1001_logo.png" width="250" />
+            <!-- <div> <h1> 1001 Optical Mobile </h1></div>  -->
+            <br><br><br>
+            <br><br>
+            <br><br>
+            <div style="font-size: 20px;">Mobile Loading ... </div>
+            <br><br>        
+            
+                       
+       </div>
+    </div>
+    
+    <div style="display:none">
+        <div id="aboutus">              
+            <div class="title red">1001 Optical - <br>The best Eyecare and Eyewear services in Australia</div>
+            
+            <div class="content">
+                <div class="logo" style="float: left; padding: 0 10px 0 0;">
+                   <img width="100" src="http://www.1001optical.com.au/img/store-b.jpg" />
+            </div>
+                <p>
+                <span class="red">1001 Optical</span> - The best Eyecare and Eyewear services in Australia For over 20 years, 1001 Optical Group has been providing our local community with the best of eye care services, most trendy fashion sunglasses and glasses / frames at most competitive prices. 1001 Optical incorporate the latest designer sunglasses with over 1001 styles and colors. Brands include Chanel, Bvlgari, Prada, Dolce & Gabbana, Christian Dior, Gucci, Oakley, Ray Ban, Versace, Roberto sda Cavalli, Gucci, Paul Smith, Tom Ford and more. New Styles are constantly introduced to keep up to date with the constant change in fashion and technology, providing a wide range of fashionable, stylish and affordable eyewear for everyone.
+                </p>
+             </div>
+                                 
+        </div>
+        
+        <div id="test_type_std">
+            <h2 class="title">STANDARD EYE TEST</h2>
+            <div class="content">
+                <p>Regular eye tests are important for clear, comfortable vision. It is essential for your eye health as well. For the comprehensive eye check, it usually takes about 30-45mins.</p>
+                <br>
+                <p>During the test, our qualified optometrists will ask you simple questions regarding to your visual needs and health history. You will be required to read and perform various visual tasks in far and close distances.</p> 
+                <br>
+                <p>After the tests, recommendations for your clear, comfortable vision and eye health will be made. These can include glasses or contact lenses, prescription eye drops, further specialised testing or review appointment in the future.</p> 
+                <br>
+                <p>Comprehensive eye check is covered by Medicare every 24 months, and short eye check-ups in between.</p>         
+            </div>
+        </div>
+        <div id="test_type_leng">
+            <h2 class="title">CONTACT LENS CONSULTATION</h2>
+            <div class="content">
+                <p>Contact lenses can make a big difference to your life. It gives you clear, comfortable and natural vision – without any vision restrictions from frames. It is important to know that well-fitted contact lenses give you maximum comfort and clarity with minimum problems.</p>
+                <br>
+                <p>After general eye test, we will gather additional information so you can be fitted with best contact lenses for you. </p> 
+                <br>
+                <p>First time wearers? Don’t worry, we will teach you how to put/remove contact lenses as well as how to take care of lenses. </p> 
+                <br>
+                <p>For contact lens wearers, it is strongly recommended to get your eyes tested every 12 months to help maintain healthy eyes with clear and comfortable vision.</p>         
+            </div>
+        </div>
+        
+        <div id="main_bottom_div">
+            <div id="main_bottom">
+                    <div style="height:0px;"></div>
+                    <div id="fullsite">
+                        <a href="http://www.1001optical.com.au/deskver.php" target="blank">1001 Full Site</a>
+                    </div>
+                    <div id="copyright">
+                        Copyright (c) 1001 Optical 2012 All Rights Reserved
+                    </div>
+                    <div id="gnasite">Powered by <a href="http://www.gnaemarketing.com.au" target="blank">GNA eMarketing</a></div>
+            </div>  
+        </div>
+        
+        <div id="promotion_fit">
+			<div class="promotion_zoom" style="width:100%">
+			
+			    <div style="position: relative;">
+			        <img src="http://1001optical.com.au/img/en_promotion_header.jpg" width="100%">
+			    </div>
+			    <div style="position: relative; margin-top: -10px;">
+			        <img src="http://1001optical.com.au/img/en_promotion_body.jpg" width="100%">
+			        <div class="youtubeDiv" style="position: absolute; left: 6.7%; height: 100%; top: 0; z-index: 200; width: 87%;">
+			            <a href="http://youtu.be/OP85sahKRKI" target="youtube"><img src="http://1001optical.com.au/img/1001promo-video.jpg" style="width: 100%;"></a> 
+			        </div>
+			    </div>
+			    <div style="position: relative; margin-top: -15px;">
+			        <img src="http://1001optical.com.au/img/en_promotion_footer.jpg" width="100%">
+			        <a class="eyetest_btn" href="#" style="width: 100%;position: absolute;top: 87%; left: 15%;"><img src="http://1001optical.com.au/img/promotion/en_promotion_button1.gif" style="width: 30%;" /></a>
+			        <a class="store_btn" href="#" style="width: 100%;position: absolute;top: 87%; left: 55%;"><img src="http://1001optical.com.au/img/promotion/en_promotion_button2.gif" style="width: 30%;" /></a>
+			    </div>
+			    
+			</div>
+        </div>
+                
+        <div id="promotion_fit_ch">
+            <div class="promotion_zoom" style="width:100%">
+            
+                <div style="position: relative;">
+			        <img src="http://1001optical.com.au/img/promotion/ch_promotion_header.jpg" width="100%">
+			    </div>
+			    <div style="position: relative; margin-top: -10px;">
+			        <img src="http://1001optical.com.au/img/promotion/ch_promotion_body.jpg" width="100%">
+			        <a href="http://www.facebook.com/1001opticalO" target="youtube" style="position: absolute; top: 0.5%; left: 40%; width: 6%; height: 3%;">
+			            <img src="http://1001optical.com.au/img/promotion/facebook.gif" style="width: 100%; height: 100%;" />
+			        </a>
+			        
+			        <a href="http://www.youtube.com/watch?v=oAmOjJNcIO4&feature=plcp" target="youtube" style="position: absolute; top: 0.5%; left: 49%; width: 6%; height: 3%;">
+			            <img src="http://1001optical.com.au/img/promotion/youtube.gif" style="width: 100%; height: 100%;" />
+			        </a>
+			        
+			        <a href="http://www.twitter.com/1001optical" target="youtube" style="position: absolute; top: 0.5%; left: 58%; width: 6%; height: 3%;">
+			            <img src="http://1001optical.com.au/img/promotion/twitter.gif" style="width: 100%; height: 100%;" />
+			        </a>
+	
+			        <a href="http://www.weibo.com/1001optical" target="youtube" style="position: absolute; top: 0.5%; left: 67%; width: 6%; height: 3%;">
+			            <img src="http://1001optical.com.au/img/promotion/waibo.gif" style="width: 100%; height: 100%;" />
+			        </a>
+			    </div>
+			    <div style="position: relative; margin-top: -10px;">
+			        <img src="http://1001optical.com.au/img/promotion/ch_promotion_footer.jpg" width="100%">
+			        <a class="eyetest_btn" href="#" style="width: 100%;position: absolute;top: 12%; left: 15%;" id="ext-element-171"><img src="http://1001optical.com.au/img/promotion/en_promotion_button1.gif" style="width: 30%;"></a>
+			        <a class="store_btn" href="#" style="width: 100%;position: absolute;top: 12%; left: 55%;" id="ext-element-172"><img src="http://1001optical.com.au/img/promotion/en_promotion_button2.gif" style="width: 30%;"></a>
+			    </div>
+            </div>          
+        </div>
+        
+        <div id="promotion_win">
+			<div class="promotion_zoom" style="width:100%">			
+			    <div style="position: relative;">
+			   		<a href="http://promoshq.wildfireapp.com/website/6/contests/300152/entries/new"  target="promotion" > 
+			        	<img src="http://1001optical.com.au/img/cms/Promotion/designer_sunglass_gift event_facebook.jpg" width="100%">
+			    	</a>
+			    </div>
+			    
+			</div>
+        </div>
+        
+        
+        <div id="promotion_armani">
+            <div class="promotion_zoom" style="width:100%">
+            
+                <div style="position: relative;">
+                    <img src="http://1001optical.com.au/img/promotion/en_promotion_header2.jpg" width="100%">
+                </div>
+                <div style="position: relative; margin-top: -10px;">
+                    <img src="http://1001optical.com.au/img/promotion/en_promotion_body2.jpg" width="100%">
+                    <a href="http://www.facebook.com/1001opticalO" target="youtube" style="position: absolute; top: 0.5%; left: 40%; width: 6%; height: 3%;">
+                        <img src="http://1001optical.com.au/img/promotion/facebook.gif" style="width: 100%; height: 100%;" />
+                    </a>
+                    
+                    <a href="http://www.youtube.com/watch?v=oAmOjJNcIO4&feature=plcp" target="youtube" style="position: absolute; top: 0.5%; left: 49%; width: 6%; height: 3%;">
+                        <img src="http://1001optical.com.au/img/promotion/youtube.gif" style="width: 100%; height: 100%;" />
+                    </a>
+                    
+                    <a href="http://www.twitter.com/1001optical" target="youtube" style="position: absolute; top: 0.5%; left: 58%; width: 6%; height: 3%;">
+                        <img src="http://1001optical.com.au/img/promotion/twitter.gif" style="width: 100%; height: 100%;" />
+                    </a>
+                </div>
+                <div style="position: relative; margin-top: -10px;">
+                    <img src="http://1001optical.com.au/img/promotion/en_promotion_footer2.jpg" width="100%">
+                    <a class="eyetest_btn" href="#" style="width: 100%;position: absolute;top: 12%; left: 15%;" id="ext-element-171"><img src="http://1001optical.com.au/img/promotion/en_promotion_button1.gif" style="width: 30%;"></a>
+                    <a class="store_btn" href="#" style="width: 100%;position: absolute;top: 12%; left: 55%;" id="ext-element-172"><img src="http://1001optical.com.au/img/promotion/en_promotion_button2.gif" style="width: 30%;"></a>
+                </div>
+            </div>   
+        </div>
+
+        <div id="promotion_armani_ch">
+            <div class="promotion_zoom" style="width:100%">
+            
+                <div style="position: relative;">
+                    <img src="http://1001optical.com.au/img/promotion/ch_promotion_header.jpg" width="100%">
+                </div>
+                <div style="position: relative; margin-top: -10px;">
+                    <img src="http://1001optical.com.au/img/promotion/ch_promotion_body.jpg" width="100%">
+                    <a href="http://www.facebook.com/1001opticalO" target="youtube" style="position: absolute; top: 0.5%; left: 40%; width: 6%; height: 3%;">
+                        <img src="http://1001optical.com.au/img/promotion/facebook.gif" style="width: 100%; height: 100%;" />
+                    </a>
+                    
+                    <a href="http://www.youtube.com/watch?v=oAmOjJNcIO4&feature=plcp" target="youtube" style="position: absolute; top: 0.5%; left: 49%; width: 6%; height: 3%;">
+                        <img src="http://1001optical.com.au/img/promotion/youtube.gif" style="width: 100%; height: 100%;" />
+                    </a>
+                    
+                    <a href="http://www.twitter.com/1001optical" target="youtube" style="position: absolute; top: 0.5%; left: 58%; width: 6%; height: 3%;">
+                        <img src="http://1001optical.com.au/img/promotion/twitter.gif" style="width: 100%; height: 100%;" />
+                    </a>
+    
+                    <a href="http://www.weibo.com/1001optical" target="youtube" style="position: absolute; top: 0.5%; left: 67%; width: 6%; height: 3%;">
+                        <img src="http://1001optical.com.au/img/promotion/waibo.gif" style="width: 100%; height: 100%;" />
+                    </a>
+                </div>
+                <div style="position: relative; margin-top: -10px;">
+                    <img src="http://1001optical.com.au/img/promotion/ch_promotion_footer.jpg" width="100%">
+                    <a class="eyetest_btn" href="#" style="width: 100%;position: absolute;top: 12%; left: 15%;" id="ext-element-171"><img src="http://1001optical.com.au/img/promotion/en_promotion_button1.gif" style="width: 30%;"></a>
+                    <a class="store_btn" href="#" style="width: 100%;position: absolute;top: 12%; left: 55%;" id="ext-element-172"><img src="http://1001optical.com.au/img/promotion/en_promotion_button2.gif" style="width: 30%;"></a>
+                </div>
+            </div>          
+        </div>
+            
+    </div>    
+</body>
+</html>
