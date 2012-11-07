@@ -150,7 +150,7 @@ Ext.define(Config.PKG+'.view.Home', {
 									icon: './resources/images/button6.gif',
 									iconOff: './resources/images/button6.gif',
 									iconOn: './resources/images/button6_select.gif',
-									action: 'news'
+									action: 'promotionwin'
 								}
 							}
 						]

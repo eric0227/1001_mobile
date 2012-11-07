@@ -4,16 +4,16 @@ Ext.define(Config.PKG+'.view.PromotionWin', {
     id: 'promotionwinview',
     
     config: {
-        title: 'Promotion',
+        title: 'Click To Win',
         iconCls: 'star',
         cls:'promotion',
         scrollable: false,
         layout: {type: 'card', animation: 'fade'},
-        index: 3,
+        index: 4,
         items: [
 			{
 				xtype: 'toolbar',
-				title: 'Promotion',
+				title: 'Click To Win',
 				docked: 'top',
 				ui: 'black',
 				items: [					

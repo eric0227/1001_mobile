@@ -250,7 +250,7 @@ Ext.define(Config.PKG+'.controller.IndexController', {
     },
     onPromotionWinTap: function(btn) {
     	console.log('onPromotionWinTap..');
-        this.showIndexToolbar(3);
+        this.showIndexToolbar(4);
         
         this.changeView(this.getPromotionWinView());
     },

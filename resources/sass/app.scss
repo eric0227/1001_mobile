@@ -27,17 +27,15 @@ $loading-spinner-color: #000000;
 @include sencha-toolbar-ui('black', #000000, 'glossy');
 
 // Your custom code goes here...
-@include pictos-iconmask('photos2');
-@include pictos-iconmask('user_list');
 @include pictos-iconmask('info_plain');
-@include pictos-iconmask('list');
 @include pictos-iconmask('phone_ring1');
 @include pictos-iconmask('search');
-@include pictos-iconmask('calendar2');
-@include pictos-iconmask('inbox3');
-@include pictos-iconmask('doc_list');
+//@include pictos-iconmask('doc_list');
 @include pictos-iconmask('locate4');
 @include pictos-iconmask('promotion');
 @include pictos-iconmask('eyetest');
 @include pictos-iconmask('expand');
 @include pictos-iconmask('delete');
+@include pictos-iconmask('check2');
+@include pictos-iconmask('list');
+

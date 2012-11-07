@@ -48,10 +48,10 @@ Ext.define(Config.PKG+".view.Index", {
                         action: 'promotionarmani'
                     },
                     {
-                        text: 'News',
-                        title: 'News',
-                        iconCls: 'doc_list',
-                        action: 'news'
+                        text: 'ClickToWin',
+                        title: 'Click To Win',
+                        iconCls: 'check2',
+                        action: 'promotionwin'
                     },
                     {
                         text: 'Hidden',
