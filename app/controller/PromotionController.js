@@ -6,9 +6,6 @@ Ext.define(Config.PKG+'.controller.PromotionController', {
             promotionView: {
                 selector: '#promotionview'
             },
-            promotionArmaniView: {
-                selector: '#promotionarmaniview'
-            },
             promotionCarousel: {
                 selector: '#promotion_carousel'
             }
@@ -24,7 +21,7 @@ Ext.define(Config.PKG+'.controller.PromotionController', {
                    	} else {
                 		//Ext.getCmp('promotion').setContentEl('promotion_fit');                		
                 	}
-                	
+              /*  	
                     var eyetest_btn = Ext.getCmp('promotion').element.down(".eyetest_btn");        
                     eyetest_btn.addListener("tap", function(event) {
                         this.getApplication().getController('IndexController').redirectTo('page/eyetestview');
@@ -34,30 +31,8 @@ Ext.define(Config.PKG+'.controller.PromotionController', {
                     store_btn.addListener("tap", function(event) {
                         this.getApplication().getController('IndexController').redirectTo('page/storeview');
                     }, this);
+              */      
                 }
-            },
-            promotionArmaniView: {
-                initialize : function() {
-                    
-                    var lang = this.getApplication().getController('IndexController').getLang();
-                    //alert(lang);
-                    if(lang == 'ch') {
-                        Ext.getCmp('promotionarmani').setContentEl('promotion_armani_ch');
-                    } else {
-                        //Ext.getCmp('promotion').setContentEl('promotion_fit');                        
-                    }
-                   
-                    var eyetest_btn = Ext.getCmp('promotionarmani').element.down(".eyetest_btn");        
-                    eyetest_btn.addListener("tap", function(event) {
-                        this.getApplication().getController('IndexController').redirectTo('page/eyetestview');
-                    }, this);
-                    
-                    var store_btn = Ext.getCmp('promotionarmani').element.down(".store_btn");        
-                    store_btn.addListener("tap", function(event) {
-                        this.getApplication().getController('IndexController').redirectTo('page/storeview');
-                    }, this);
-                    
-                }                   
             }
         }
     },

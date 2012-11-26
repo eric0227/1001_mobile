@@ -46,10 +46,24 @@ Ext.define(Config.PKG+'.view.Home', {
         },
         items: [
             {
+            	xtype: 'panel',
+            	width: '100%',
+            	height: 'auto',
+            	html: "<img src='./resources/images/title_bg.gif' style='width:100%' />"
+            },
+            {
 				xtype: 'panel',
 				width: '100%',
 				height: 'auto',
-				html: "<a href='#page/promotionview'><img src='./resources/images/main_header.jpg' style='width: 100%;' /></a>"
+				style: 'margin-top:-5px;',
+				html: "<a href='#page/promotionview'><img src='./resources/images/banner1_26112012.jpg' style='width: 100%;' /></a>"
+            },
+            {
+            	xtype: 'panel',
+            	width: '100%',
+            	height: 'auto',
+            	style: 'margin-top:-5px;',
+            	html: "<a href='#page/promotionview_b'><img src='./resources/images/banner2_26112012.jpg' style='width: 100%;' /></a>"
             },
             {
             	xtype: 'panel',
@@ -119,7 +133,7 @@ Ext.define(Config.PKG+'.view.Home', {
 									icon: './resources/images/button3.gif',
 									iconOff: './resources/images/button3.gif',
 									iconOn: './resources/images/button3_select.gif',
-									action: 'promotionarmani'
+									action: 'promotion'
 								}
 							},
 							{

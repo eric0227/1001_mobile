@@ -30,6 +30,11 @@ Ext.define(Config.PKG+'.controller.IndexController', {
                 xtype: 'promotionview',
                 autoCreate: true
             },
+            promotion: {
+                selector: '#promotion',
+                xtype: 'promotion',
+                autoCreate: true
+            },
             promotionWinView: {
                 selector: '#promotionwinview',
                 xtype: 'promotionwinview',
@@ -97,7 +102,6 @@ Ext.define(Config.PKG+'.controller.IndexController', {
             'indexview button[action=store]' : {tap: 'onStoreTap'},
             'indexview button[action=promotion]' : {tap: 'onPromotionTap'},
             'indexview button[action=promotionwin]' : {tap: 'onPromotionWinTap'},
-            'indexview button[action=promotionarmani]': {tap: 'onPromotionArmaniTap'}, 
             'indexview button[action=news]' : {tap: 'onNewsTap'}
         },
         
@@ -173,15 +177,24 @@ Ext.define(Config.PKG+'.controller.IndexController', {
     	console.log('go RoutePage => ', type);
     	if(type == "promotionview") {
     		this.onPromotionTap();
-    	} if(type == "promotionchview") {
-    		//Ext.getCmp('promotion').setContentEl('promotion_fit_ch');
-    		this.setLang('ch');
+    	} else if(type == "promotionchview") {
+            //Ext.getCmp('promotion').setContentEl('promotion_fit_ch');
+            this.setLang('ch');
             this.onPromotionTap();
-        } if(type == "promotionwinview") {
+        } else if(type == "promotionview_b") {
+            this.onPromotionTap();
+            setTimeout(
+                function() {
+                    var promotionimg_b = Ext.get('promotionimg_b');
+                    location.href = '#promotionimg_b';
+                }
+                ,500
+            );
+        } else if(type == "promotionwinview") {
             this.onPromotionWinTap();
-        } if(type == "promotionarmaniview") {
+        } else if(type == "promotionarmaniview") {
             this.onPromotionArmaniTap();
-        } if(type == "promotionarmanichview") {
+        } else if(type == "promotionarmanichview") {
         	this.setLang('ch');
             this.onPromotionArmaniTap();
         } else if(type == "brandsview") {
@@ -244,21 +257,18 @@ Ext.define(Config.PKG+'.controller.IndexController', {
     },
     onPromotionTap: function(btn) {
     	console.log('onPromotionTap..');
-        this.showIndexToolbar();
+    	this.showIndexToolbar(3);
         
         this.changeView(this.getPromotionView());
     },
     onPromotionWinTap: function(btn) {
+    	location.href='https://www.facebook.com/1001opticalO/app_28134323652?ref=ts';
+    /*	
     	console.log('onPromotionWinTap..');
         this.showIndexToolbar(4);
         
         this.changeView(this.getPromotionWinView());
-    },
-    onPromotionArmaniTap: function(btn) {
-        console.log('onPromotionArmaniTap..');
-        this.showIndexToolbar(3);
-        
-        this.changeView(this.getPromotionArmaniView());
+    */    
     },
     onCatalogTap: function(btn) {
         console.log('onCatalogTap..');

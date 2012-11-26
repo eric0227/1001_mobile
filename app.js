@@ -41,8 +41,7 @@ Ext.application({
             'StoreSelectPop', 
             'CustomTitleBar', 
             'News',
-            'PromotionWin',
-            'PromotionArmani'
+            'PromotionWin'
             ],
             
     models: ['BrandsModel', 
