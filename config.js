@@ -17,5 +17,5 @@ var Config = {
 	NEWS_URL        : _DOMAIN + '/cms.php?id_cms_category=11&mobile=1',
 	PRODUCT_URL     : _DOMAIN + '/product.php',
 	STORE_URL       : _DOMAIN + '/stores.php',
-	EYETEST_URL     : _DOMAIN + '/eye-test.php'
+	EYETEST_URL     : '/eye-test.php'
 };
