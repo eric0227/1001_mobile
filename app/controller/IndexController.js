@@ -262,13 +262,13 @@ Ext.define(Config.PKG+'.controller.IndexController', {
         this.changeView(this.getPromotionView());
     },
     onPromotionWinTap: function(btn) {
-    	location.href='https://www.facebook.com/1001opticalO/app_28134323652?ref=ts';
-    /*	
+    	//window.open('https://www.facebook.com/1001opticalO/app_28134323652?ref=ts', 'facebook');
+    	//window.open('http://1001optical.com.au/en/content/64-facebook-campain?deskver=1', '1001');
+    	//location.href='https://www.facebook.com/1001opticalO/app_28134323652?ref=ts';
+    	
     	console.log('onPromotionWinTap..');
-        this.showIndexToolbar(4);
-        
-        this.changeView(this.getPromotionWinView());
-    */    
+        this.showIndexToolbar(4);   
+        this.changeView(this.getPromotionWinView());  
     },
     onCatalogTap: function(btn) {
         console.log('onCatalogTap..');
